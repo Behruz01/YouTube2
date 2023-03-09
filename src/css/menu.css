@@ -1,0 +1,14 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.list {
+  align-items: center;
+}
+
+.sidebar{
+margin-top: 80px;
+height: 100%;
+}
