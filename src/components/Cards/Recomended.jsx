@@ -25,7 +25,6 @@ const Recomended = () => {
               key={video.id}
               video={video.image}
               avatar={userImg}
-              sfssfsfs
               title={video.title}
               author={video.category}
               date={video.price}
