@@ -1,7 +1,9 @@
 
-
-
-const VideoCard = ({video, avatar,author,title,date})=>{
+const VideoCard = ({video, avatar,author,title,date,})=>{
+    
+    const updateLikeHandler = (id)=>{
+        console.log(id);
+    }
     return(
         <div className="video__card cursor-pointer mb-10">
             <div className="video__img">
@@ -12,7 +14,7 @@ const VideoCard = ({video, avatar,author,title,date})=>{
                 <img className="rounded-xl" src={avatar} alt="" />
             </div>
             <div className="video__info w-50">
-                <h3 className="font-medium">{title}</h3>
+                <h3 onClick={()=>updateLikeHandler(video.id)} className="font-medium">{title}</h3>
                 <a className="text-sm">
                     {author}
                 </a>

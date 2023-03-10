@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import userImg from "../../images/user_icon.svg";
 import BASE_URL from "../BASE_URL/BASE_URL";
+import Home from "../pages/Home";
 import VideoCard from "./videoCard/VideoCard.jsx";
 
 const Recomended = () => {
@@ -31,6 +32,7 @@ const Recomended = () => {
             />
           </Link>
         ))}
+      <Home />
       </div>
     </div>
   );
