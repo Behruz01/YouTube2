@@ -20,7 +20,7 @@ const SinglePage = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await fetch(BASE_URL + "product/" + id);
+        const res = await fetch(BASE_URL + "products/" + id);
 
         if (res.status === 500) {
           throw new Error("Ma'lumot topilmadi!");
@@ -28,7 +28,6 @@ const SinglePage = () => {
 
         const data = await res.json();
         setVideoData(data);
-        
       } catch (error) {
         setIsError(true);
       }
@@ -38,10 +37,6 @@ const SinglePage = () => {
       .then((data) => setVideos(data));
     getData();
   }, [id]);
-
-  console.log(videos);
-
-  console.log(videoData);
 
   return (
     <Layout isSinglePage>
