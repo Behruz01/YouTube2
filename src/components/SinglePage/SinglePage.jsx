@@ -1,5 +1,4 @@
 import BASE_URL from "../BASE_URL/BASE_URL";
-// import Layout from "../../layout/Layout";
 import userImg from "../../images/Oval.png";
 import Comments from "./comments/comments";
 
@@ -22,11 +21,14 @@ const SinglePage = () => {
     const getData = async () => {
       try {
         const res = await fetch(BASE_URL + "product/" + id);
+
         if (res.status === 500) {
           throw new Error("Ma'lumot topilmadi!");
         }
+
         const data = await res.json();
         setVideoData(data);
+        
       } catch (error) {
         setIsError(true);
       }
@@ -36,6 +38,11 @@ const SinglePage = () => {
       .then((data) => setVideos(data));
     getData();
   }, [id]);
+
+  console.log(videos);
+
+  console.log(videoData);
+
   return (
     <Layout isSinglePage>
       {!IsError ? (
